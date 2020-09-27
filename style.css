@@ -1,20 +1,69 @@
+html {
+    background-color: rgb(255, 254, 254);
+    font-family: 'Didact Gothic', sans-serif;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+}
+
 .grid {
     height: 400px;
     width: 400px;
-    display: flex;
-    flex-wrap: wrap;
-    background-color: grey;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    background-color: #0A1045;
+    box-sizing: border-box;
+    margin: 0px auto;
 }
 
 .grid div {
     height: 40px;
     width: 40px;
+    border: 2px solid #000c7b;
+    border-style: inset;
+    box-sizing: border-box;
 }
 
-.bomb {
-    background-color: orange;
+.grid div.bomb {
+    
+    color: #ff6ed6;
+    background-color: #0A1045;
+    border: 2px solid #000c7b;
+    border-style: inset;
+    
 }
 
-.checked {
-    background-color: red;
+.grid div.checked {
+    background-color: #00C2D1;
+    border: 3px solid #1ee5f3;
+    border-style: inset;
+    color: #24838a;
+
+    background-color: #000c7b;
+    border: 3px solid #0b1aa5;
+    border-style: inset;
 }
+
+.grid div.checked[data="1"] {
+    color: #ADFC92;
+    font-weight: bold;
+}
+
+.grid div.checked[data="2"] {
+    color: #63D471;
+    font-weight: bold;
+}
+
+.grid div.checked[data="3"] {
+    color: #ff9e35;
+    font-weight: bold;
+}
+
+.grid div.checked[data="4"] {
+    color: #ED33B9;
+    font-weight: bold;
+}
+
+/* #ADFC92
+#63D471
+#00C2D1 */

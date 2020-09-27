@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!square.classList.contains("checked") && flags < bombAmount) {
       if (!square.classList.contains("flag")) {
         square.classList.add("flag");
-        square.innerHTML = "🚩";
+        square.innerHTML = "<i class='fa fa-flag'></i>";
         flags++;
         checkForWin();
       } else {
@@ -181,7 +181,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     squares.forEach((square) => {
       if (square.classList.contains("bomb")) {
-        square.innerHTML = "💣";
+        square.innerHTML = "<i class='fa fa-bomb'></i>";
       }
     });
   }
